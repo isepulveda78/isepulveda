@@ -28,7 +28,7 @@ export default function Home() {
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                     <ul className="navbar-nav">
                         <li className="nav-item"><Link href="#about"><a className="nav-link js-scroll-trigger">About</a></Link></li>
-                        <li className="nav-item"><Link href="/blog"><a className="nav-link js-scroll-trigger">Blog</a></Link></li>
+                        <li className="nav-item"><Link href="/notes"><a className="nav-link js-scroll-trigger">Notes</a></Link></li>
                         <li className="nav-item"><Link href="#education"><a className="nav-link js-scroll-trigger">Education</a></Link></li>
                         <li className="nav-item"><Link href="#skills"><a className="nav-link js-scroll-trigger">Skills</a></Link></li>
                         <li className="nav-item"><Link href="#projects"><a className="nav-link js-scroll-trigger">Projects</a></Link></li>
