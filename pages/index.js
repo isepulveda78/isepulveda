@@ -30,7 +30,7 @@ export default function blog({posts}){
 
 
 export async function getStaticProps(){
-    const res = await fetch(`/api/posts`)
+    const res = await fetch(`https://isepulveda-83mk6zqst-isepulveda78.vercel.app/api/posts`)
     const posts = await res.json()
     return {
         props: {
