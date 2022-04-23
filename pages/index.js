@@ -3,6 +3,7 @@ import LayoutTwo from "@/components/LayoutTwo"
 import Head from "@/components/Head"
 import Post from "@/components/Post"
 import Link from "next/link"
+import { API_URL } from "utls/url"
 
 export default function blog({posts}){
     return (
@@ -30,7 +31,7 @@ export default function blog({posts}){
 
 
 export async function getStaticProps(){
-    const res = await fetch(`https://isepulveda-83mk6zqst-isepulveda78.vercel.app/api/posts`)
+    const res = await fetch(`${API_URL}/api/posts`)
     const posts = await res.json()
     return {
         props: {

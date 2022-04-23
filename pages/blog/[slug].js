@@ -27,7 +27,7 @@ export default function PostPage({post}){
 }
 
 export async function getServerSideProps({ query: { slug }}){
-    const res = await fetch(`https://isepulveda-83mk6zqst-isepulveda78.vercel.app/api/posts/${slug}`)
+    const res = await fetch(`${API_URL}/api/posts/${slug}`)
     const posts = await res.json()
 
     return {

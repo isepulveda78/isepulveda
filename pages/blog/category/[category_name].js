@@ -47,10 +47,12 @@ export default function blog({posts, categories, categoryName}){
 }
 
 export async function getStaticPaths() {
-    const res = await fetch(`https://isepulveda-83mk6zqst-isepulveda78.vercel.app/api/posts`)
+    const res = await fetch(`${API_URLs}/api/posts`)
     const posts = await res.json()
 
-    const categories = posts.map((post) => return post.category.toLowerCase() )
+    const categories = posts.map((post) => {
+        return post.category.toLowerCase() 
+    })
 
     const paths = categories.map((category) => ({
       params: { category_name: category },
@@ -64,7 +66,7 @@ export async function getStaticPaths() {
   
 
 export async function getStaticProps({ params: { category_name } }){
-    const res = await fetch(`https://isepulveda-83mk6zqst-isepulveda78.vercel.app/api/posts`)
+    const res = await fetch(`${API_URL}/api/posts`)
     const posts = await res.json()
 
     const categories = posts.map((post) => post.category )
