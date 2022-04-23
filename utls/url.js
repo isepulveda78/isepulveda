@@ -1,2 +1,2 @@
 
-export const API_URL = 'https://isepulveda-p6mtwjkbi-isepulveda78.vercel.app'
+export const API_URL = 'https://isepulveda-m5poy26we-isepulveda78.vercel.app'
