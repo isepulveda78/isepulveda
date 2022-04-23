@@ -47,7 +47,7 @@ export default function blog({posts, categories, categoryName}){
 }
 
 export async function getStaticPaths() {
-    const res = await fetch(`http://localhost:3000/api/posts`)
+    const res = await fetch(`http://isepulveda-3s7zgnqat-isepulveda78.vercel.app/api/posts`)
     const posts = await res.json()
 
     const categories = posts.map((post) => post.category.toLowerCase() )
