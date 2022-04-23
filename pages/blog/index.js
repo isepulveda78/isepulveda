@@ -47,7 +47,7 @@ export default function blog({posts, categories}){
 
 
 export async function getStaticProps(){
-    const res = await fetch(`/api/posts`)
+    const res = await fetch(`https://isepulveda-83mk6zqst-isepulveda78.vercel.app/api/posts/api/posts`)
     const posts = await res.json()
 
     const categories = posts.map((post) => post.category )
