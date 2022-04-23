@@ -1,5 +1,2 @@
-import { useRouter } from 'next/router'
 
-const router = useRouter
-
-export const API_URL = router.pathname || 'http://localhost:3000'
+export const API_URL = 'https://isepulveda-p6mtwjkbi-isepulveda78.vercel.app'
