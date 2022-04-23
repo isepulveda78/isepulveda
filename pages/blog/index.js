@@ -3,7 +3,7 @@ import LayoutTwo from "@/components/LayoutTwo"
 import Categories from "@/components/Categories"
 import Post from "@/components/PostColumn"
 import Link from "next/link"
-
+import { API_URL } from "utls/url"
 export default function blog({posts, categories}){
     return (
         <LayoutTwo>
@@ -43,8 +43,7 @@ export default function blog({posts, categories}){
         </LayoutTwo>
      
     )
-}z
-
+}
 
 export async function getStaticProps(){
     const res = await fetch(`${API_URL}/api/posts`)

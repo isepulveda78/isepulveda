@@ -1,7 +1,7 @@
 
 import LayoutTwo from '@/components/LayoutTwo'
 import Navigation from '@/components/Navigation'
-
+import { API_URL } from 'utls/url'
 export default function PostPage({post}){
     return (
         <LayoutTwo>

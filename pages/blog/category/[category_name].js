@@ -3,7 +3,7 @@ import LayoutTwo from "@/components/LayoutTwo"
 import Post from "@/components/PostColumn"
 import Link from "next/link"
 import Categories from "@/components/Categories"
-
+import { API_URL } from "utls/url"
 export default function blog({posts, categories, categoryName}){
     return (
         <LayoutTwo>
@@ -47,7 +47,7 @@ export default function blog({posts, categories, categoryName}){
 }
 
 export async function getStaticPaths() {
-    const res = await fetch(`${API_URLs}/api/posts`)
+    const res = await fetch(`${API_URL}/api/posts`)
     const posts = await res.json()
 
     const categories = posts.map((post) => {
