@@ -50,7 +50,7 @@ export async function getStaticPaths() {
     const res = await fetch(`https://isepulveda-83mk6zqst-isepulveda78.vercel.app/api/posts`)
     const posts = await res.json()
 
-    const categories = posts.map((post) => post.category.toLowerCase() )
+    const categories = posts.map((post) => return post.category.toLowerCase() )
 
     const paths = categories.map((category) => ({
       params: { category_name: category },
