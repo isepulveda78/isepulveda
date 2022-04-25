@@ -4,9 +4,9 @@ export default function Categories({categories}){
     return (
                 <>
                         {categories.map((category, id) => (
-                           <li> <Link key={id} href={`/blog/category/${category.toLowerCase()}`}>
+                           <div> <Link key={id} href={`/blog/category/${category.toLowerCase()}`}>
                                 {category}
-                            </Link> </li>
+                            </div> </li>
                         ))}
                </>
     )
