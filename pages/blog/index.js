@@ -30,9 +30,9 @@ export default function blog({posts, categories}){
                             <div className="card-body">
                                 <div className="row">
                                     <div className="col-sm-6">
-                                        <ul className="list-unstyled mb-0">
+                                        <div className="list-unstyled mb-0">
                                                <Categories categories={categories} />
-                                            </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
