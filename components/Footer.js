@@ -15,14 +15,14 @@ export default function Footer(){
                     <div className="col-md-12 text-center">
                     <h2 className="p-4"><a href="/" className="text-light">isepulveda.me</a></h2>
                         <ul className="nav justify-content-center">
-                            <li className="nav-item"><Link href="#"><a className="nav-link text-light">Home</a></Link></li>
-                            <li className="nav-item"><Link href="#"><a className="nav-link text-light">Home</a></Link></li>
-                            <li className="nav-item"><Link href="#"><a className="nav-link text-light">Home</a></Link></li>
+                            <li className="nav-item"><Link href="#"><div className="nav-link text-light">Home</div></Link></li>
+                            <li className="nav-item"><Link href="#"><div className="nav-link text-light">Home</div></Link></li>
+                            <li className="nav-item"><Link href="#"><div className="nav-link text-light">Home</div></Link></li>
                         </ul>
                         <ul className="nav justify-content-center">
-                        <li className="nav-item"><Link href="#"><a className="nav-item" data-toggle="tooltip" data-placement="top" title="LinkedIn"> <FaLinkedinIn /> </a></Link></li>
-                            <li className="nav-item"><Link href="#"><a className="nav-item" data-toggle="tooltip" data-placement="top" title="Facebook"> <FaFacebookF /> </a></Link></li>
-                            <li className="nav-item"><Link href="#"><a className="nav-item" data-toggle="tooltip" data-placement="top" title="GitHub"> <FaGithub /> </a></Link></li>
+                        <li className="nav-item"><Link href="#"><div className="nav-item" data-toggle="tooltip" data-placement="top" title="LinkedIn"> <FaLinkedinIn /> </div></Link></li>
+                            <li className="nav-item"><Link href="#"><div className="nav-item" data-toggle="tooltip" data-placement="top" title="Facebook"> <FaFacebookF /> </div></Link></li>
+                            <li className="nav-item"><Link href="#"><div className="nav-item" data-toggle="tooltip" data-placement="top" title="GitHub"> <FaGithub /> </div></Link></li>
                         </ul>
                     </div>
                 </div>
