@@ -8,6 +8,7 @@ export default function Categories({categories}){
                                 {categories.name}
                     </Link>
                 </div>
-                </>
+         
+               </>
     )
 }

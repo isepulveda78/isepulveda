@@ -58,11 +58,11 @@ export default function blog({posts, categories}){
 export async function getStaticProps(){
     const posts = await getPosts()
     const categories = await getCategories()
-    const uniqueCategories = [...new Set(categories)]
+
     return {
         props: {
             posts,
-            categories: uniqueCategories
+            categories
         },
         revalidate: 10, 
     }
