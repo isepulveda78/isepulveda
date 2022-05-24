@@ -1,7 +1,8 @@
 import Head from "next/head"
-
+import { useRouter } from "next/router"
 
 export default function LayoutTwo({ title, children, keywords, description }) {
+    const router = useRouter()
     return (
         <>
             <Head>

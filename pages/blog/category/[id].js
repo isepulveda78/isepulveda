@@ -4,16 +4,23 @@ import Categories from "@/components/Categories"
 import Post from "@/components/PostColumn"
 import Link from "next/link"
 import Footer from "@/components/Footer"
-import { getPosts, getCategories } from "utls/wordpress"
+import { getCategoryId, getCategories } from "utls/wordpress"
+import { useRouter } from "next/router"
+import https from 'https'
+
+const httpsAgent = new https.Agent({
+    rejectUnauthorized: false,
+})
 
 export default function blog({posts, categories}){
+
     const jsxPosts = posts.map((post) => {
         return  <Post key={post.id} post={post}/>
     })
 
     const jsxCats = categories.map((cat) => {
-        return  <Categories key={cat.id} categories={cat} />
-    })
+         return  <Categories key={cat.id} categories={cat} />
+     })
 
     return (
         <LayoutTwo>
@@ -39,7 +46,7 @@ export default function blog({posts, categories}){
                                 <div className="row">
                                     <div className="col-sm-6">
                                         <div className="list-unstyled mb-0">
-                                            { jsxCats }
+                                         { jsxCats }
                                             </div>
                                         </div>
                                     </div>
@@ -54,17 +61,16 @@ export default function blog({posts, categories}){
     )
 }
 
-
-export async function getStaticProps(){
-    const posts = await getPosts()
+export async function getServerSideProps({ params: {id} }){
+    const res = await fetch(`https://webdev102.com/wp-json/wp/v2/posts?categories=${id}`,{
+        agent: httpsAgent
+    })
+    const posts = await res.json()
     const categories = await getCategories()
-    const uniqueCategories = [...new Set(categories)]
     return {
         props: {
             posts,
-            categories: uniqueCategories
-        },
-        revalidate: 10, 
+            categories
+        }
     }
 }
-

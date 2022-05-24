@@ -1,7 +1,10 @@
 
 import LayoutTwo from '@/components/LayoutTwo'
 import Navigation from '@/components/Navigation'
-import { API_URL } from 'utls/url'
+import { API_URL } from 'utls/wordpress'
+import Footer from '@/components/Footer'
+import { getPost, getSlugs } from 'utls/wordpress'
+
 export default function PostPage({post}){
     return (
         <LayoutTwo>
@@ -11,28 +14,37 @@ export default function PostPage({post}){
                     <div className="col-lg-12">
                         <article>
                             <header className="mb-4">
-                                <h2 className="fw-bolder mb-1">{post.title}</h2>
-                                <a className="badge bg-secondary text-decoration-none link-light" href="#!">{post.category}</a>
+                                <h2 className="fw-bolder mb-1" dangerouslySetInnerHTML={{ __html: post.title.rendered}}></h2>
+  
                             </header>
 
                             <section className="mb-5">
-                                <p className="fs-5 mb-4">{post.body}</p>
+                                <div className="fs-5 mb-4" dangerouslySetInnerHTML={{ __html: post.content.rendered}}></div>
                             </section>
                          </article>
                     </div>
                 </div>
             </div>
+            <Footer />
         </LayoutTwo>
     )
 }
 
-export async function getServerSideProps({ query: { slug }}){
-    const res = await fetch(`${API_URL}/api/posts/${slug}`)
-    const posts = await res.json()
+export async function getStaticPaths(){
+    const paths = await getSlugs('posts')
+ 
+    return {
+        paths,
+        fallback: 'blocking',
+    }
+}
 
+export async function getStaticProps({ params }){
+    const post = await getPost(params.slug)
     return {
         props: {
-            post: posts[0]
-        }
+            post
+        },
+        revalidate: 10,
     }
 }
