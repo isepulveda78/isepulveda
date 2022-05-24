@@ -13,7 +13,7 @@ export default function Footer(){
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-12 text-center">
-                    <h2 className="p-4"><a href="/" className="text-light">isepulveda.me</a></h2>
+                    <h2 className="p-4"><Link href="/"><div className="text-light">isepulveda.me</div></Link></h2>
                         <ul className="nav justify-content-center">
                             <li className="nav-item"><Link href="#"><div className="nav-link text-light">Home</div></Link></li>
                             <li className="nav-item"><Link href="#"><div className="nav-link text-light">Home</div></Link></li>
