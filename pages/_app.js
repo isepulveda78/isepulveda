@@ -1,5 +1,6 @@
 import Script from "next/script"
 import '../styles/blog.css'
+import '../styles/custom.css'
 import LayoutTwo from "@/components/LayoutTwo"
 
 function MyApp({ Component, pageProps }) {
