@@ -49,11 +49,11 @@ export default function Search({ placeholder, data }){
           </div>
             {filteredData.length != 0 && (
                 <ul className="search-card list-group h-100 bg-light">
-                    {filteredData.slice(0, 5).map((post, key) => {
+                    {filteredData.slice(0, 5).map((post) => {
                       return (
                         <li className="list-group-item" role="button">
-                            <Link href={`/blog/${post.slug}`} key={key.id} target="_blank" className="text-dark">
-                                <p>{post.title.rendered}</p>
+                            <Link href={`/blog/${post.slug}`} target="_blank" className="text-dark">
+                                <p key={post.id}>{post.title.rendered}</p>
                             </Link> 
                          </li>
                       )
