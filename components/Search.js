@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { faMagnifyingGlass, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default function Search({ placeholder, data }){
+export default function Search({ placeholder, data, key }){
 
     const [filteredData, setFilteredData ] = useState([])
     const [wordEntered, setWordEntered ] = useState('')
