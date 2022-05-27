@@ -16,8 +16,7 @@ export default function blog({posts}){
                <Navigation />
                <Head />
                <div className="container">
-                    <div className="row">
-                        
+                    <div className="row">  
                     <h2>Notes</h2>
                     { posts.length === 0 && <h3>No notes.</h3> }
                         {jsxPosts}

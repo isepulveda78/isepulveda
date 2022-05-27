@@ -1,5 +1,6 @@
 .search-card{
     z-index: 999 !important;
+    width: auto;
 }
 .list-group{
     position: absolute !important;
