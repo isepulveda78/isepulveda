@@ -41,7 +41,7 @@ export default function Search({ placeholder, data }){
             />
             <span className="input-group-text">
             {
-                filteredData.length === 0 ? <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /> : <span id='clearBtn' onClick={clearInput}><i class="fa-solid fa-xmark"></i></span> 
+                filteredData.length === 0 ? <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /> : <span id='clearBtn' onClick={clearInput}><FontAwesomeIcon icon="fa-solid fa-xmark" /></span> 
             }
             </span>
         </div>
