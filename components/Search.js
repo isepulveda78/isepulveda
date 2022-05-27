@@ -52,7 +52,7 @@ export default function Search({ placeholder, data }){
                     {filteredData.slice(0, 5).map((post, key) => {
                       return (
                         <li className="list-group-item" role="button">
-                            <Link href={`/blog/${post.slug}`} key={key} target="_blank" className="text-dark">
+                            <Link href={`/blog/${post.slug}`} key={key.id} target="_blank" className="text-dark">
                                 <p>{post.title.rendered}</p>
                             </Link> 
                          </li>
