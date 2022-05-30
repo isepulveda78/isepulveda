@@ -12,7 +12,7 @@ export default function Post({post, cats }){
                     <div className="card-text" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered}}>
                     </div>
                     <hr/>
-                    <span class="badge bg-secondary">{cats}</span>
+                    <span className="badge bg-secondary">{cats}</span>
                 </div>
             </div>
     )
