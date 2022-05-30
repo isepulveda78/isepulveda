@@ -15,7 +15,7 @@ export default function Navigation(){
     
     useEffect(() => {
         const getResults = async () => {
-          const data = await axios.get(`https://webdev102.com/wp-json/wp/v2/posts`)
+          const data = await axios.get(`https://isrsep.dreamhosters.com/wp-json/wp/v2/posts`)
             .then((res) => {
                 const response = res.data
                 setPosts(response)

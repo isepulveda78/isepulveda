@@ -1,7 +1,5 @@
-
 import LayoutTwo from '@/components/LayoutTwo'
 import Navigation from '@/components/Navigation'
-import { API_URL } from 'utls/wordpress'
 import Footer from '@/components/Footer'
 import { getPost, getSlugs } from 'utls/wordpress'
 

@@ -2,12 +2,8 @@ import Link from "next/link"
 
 export default function Categories({categories}){
     return (
-                <>
-                <div key={categories.id}>
-                    <Link href={`/blog/category/${categories.id}`}>
-                                {categories.name}
-                    </Link>
+                <div>
+                    <Link href={`/blog/category/${categories.id}`}><a>{categories.name}</a></Link>
                 </div>
-                </>
     )
 }

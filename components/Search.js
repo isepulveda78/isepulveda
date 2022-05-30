@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import { faMagnifyingGlass, faXmark } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import { FaSearch } from 'react-icons/fa'
+import { GrClose } from 'react-icons/gr'
 export default function Search({ placeholder, data}){
 
     const [filteredData, setFilteredData ] = useState([])
@@ -41,7 +40,7 @@ export default function Search({ placeholder, data}){
             />
             <span className="input-group-text">
             {
-                filteredData.length === 0 ? <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /> : <span id='clearBtn' onClick={clearInput}><FontAwesomeIcon icon="fa-solid fa-xmark" /></span> 
+                filteredData.length === 0 ? <span><FaSearch /></span> : <span id='clearBtn' onClick={clearInput} role="button"><GrClose /></span> 
             }
             </span>
         </div>

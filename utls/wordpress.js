@@ -4,9 +4,9 @@ const httpsAgent = new https.Agent({
     rejectUnauthorized: false,
 })
 
-const API_URL = 'https://webdev102.com/wp-json/wp/v2/posts'
-const categories = 'https://webdev102.com/wp-json/wp/v2/categories'
-const category = 'https://webdev102.com/wp-json/wp/v2/posts?categories='
+const API_URL = 'https://isrsep.dreamhosters.com/wp-json/wp/v2/posts'
+const categories = 'https://isrsep.dreamhosters.com/wp-json/wp/v2/categories'
+const category = 'https://isrsep.dreamhosters.com/wp-json/wp/v2/posts?categories='
 
 export async function getPosts(){
     const postsRes = await fetch(API_URL, {

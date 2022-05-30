@@ -9,8 +9,11 @@ import { getPosts } from "utls/wordpress"
 export default function blog({posts}){
     
     const jsxPosts = posts.map((post) => {
-        return  <Post key={post.id} post={post}/>
-    })
+        const cat = post.cats.map((cat)=> {
+             return cat.name
+         })
+         return  <Post key={post.id} post={post} cats={cat}/>
+     })
     return (
         <LayoutTwo>
                <Navigation />

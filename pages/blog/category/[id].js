@@ -62,7 +62,7 @@ export default function blog({posts, categories}){
 }
 
 export async function getServerSideProps({ params: {id} }){
-    const res = await fetch(`https://webdev102.com/wp-json/wp/v2/posts?categories=${id}`,{
+    const res = await fetch(`https://isrsep.dreamhosters.com/wp-json/wp/v2/posts?categories=${id}`,{
         agent: httpsAgent
     })
     const posts = await res.json()
