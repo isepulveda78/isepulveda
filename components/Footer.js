@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import {
     FaLinkedinIn,
     FaFacebookF,
@@ -13,7 +14,12 @@ export default function Footer(){
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-md-12 text-center">
-                    <h2 className="p-4 footer-brand"><Link href="/" className="text-light">isepulveda</Link></h2>
+                    <h2 className="p-4 footer-brand"><Link href="/" className="text-light">isepulveda.me</Link></h2>
+                        <Link Link href="/">
+                        <div className="text-center" role="button">
+                            <Image src={'/img/isepulveda.png'} width={50} height={50} className="logo"/>
+                        </div>
+                        </Link>
                         <ul className="nav justify-content-center">
                             <li className="nav-item"><Link href="#"><div className="nav-link text-light" role="button">About</div></Link></li>
                             <li className="nav-item"><Link href="/blog"><div className="nav-link text-light" role="button">Blog</div></Link></li>
