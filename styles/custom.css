@@ -25,12 +25,9 @@ img{
     background: url('/img/matrix.svg') !important;
     background-repeat: repeat !important;
     background-attachment: fixed !important;
-    border-radius: 0 0 50% 50%/ 0 0 100% 100% !important;
-    transform: scaleX(1.5);
 }
 .background-header h1{
     font-family: 'Pacifico', cursive; 
-    transform: scaleX(.7) !important;
 }
 .search-card{
     z-index: 999 !important;
