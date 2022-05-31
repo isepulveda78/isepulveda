@@ -40,7 +40,7 @@ export default function Search({ placeholder, data}){
             />
             <span className="input-group-text">
             {
-                filteredData.length === 0 ? <span><FaSearch /></span> : <span id='clearBtn' onClick={clearInput} role="button"><GrClose /></span> 
+                filteredData.length === 0 ? <span><FaSearch /></span> : <span id='clearBtn' onClick={clearInput} role="button"><GrClose  className="text-white"/></span> 
             }
             </span>
         </div>
