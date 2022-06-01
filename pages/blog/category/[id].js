@@ -4,7 +4,7 @@ import Categories from "@/components/Categories"
 import Post from "@/components/PostColumn"
 import Link from "next/link"
 import Footer from "@/components/Footer"
-
+import { getCategories } from "utls/wordpress"
 
 import https from 'https'
 
