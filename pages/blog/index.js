@@ -7,6 +7,8 @@ import Footer from "@/components/Footer"
 import { getPosts, getCategories } from "utls/wordpress"
 
 export default function blog({posts, categories}){
+
+
     const jsxPosts = posts.map((post) => {
        const cat = post.cats.map((cat)=> {
             return cat.name

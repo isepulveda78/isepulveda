@@ -4,8 +4,8 @@ import Categories from "@/components/Categories"
 import Post from "@/components/PostColumn"
 import Link from "next/link"
 import Footer from "@/components/Footer"
-import { getCategoryId, getCategories } from "utls/wordpress"
-import { useRouter } from "next/router"
+
+
 import https from 'https'
 
 const httpsAgent = new https.Agent({
