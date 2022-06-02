@@ -4,15 +4,15 @@ import Head from "@/components/Head"
 import Post from "@/components/Post"
 import Link from "next/link"
 import Footer from "@/components/Footer"
-import { getPosts } from "utls/wordpress"
+import { getPortfolio } from "utls/wordpress"
 
 export default function blog({posts}){
     
     const jsxPosts = posts.map((post) => {
-        const cat = post.cats.map((cat)=> {
-             return cat.name
+        const cat = post.categories.map((cat)=> {
+             return <div className="badge bg-primary">{cat.name}</div>
          })
-         return  <Post key={post.id} post={post} cats={cat}/>
+         return <Post key={post.id} post={post} cats={cat}/>
      })
     return (
         <LayoutTwo>
@@ -37,7 +37,7 @@ export default function blog({posts}){
 
 
 export async function getStaticProps(){
-    const posts = await getPosts()
+    const posts = await getPortfolio()
 
     return {
         props: {

@@ -7,12 +7,21 @@ const httpsAgent = new https.Agent({
 const API_URL = 'https://isrsep.dreamhosters.com/wp-json/wp/v2/posts'
 const categories = 'https://isrsep.dreamhosters.com/wp-json/wp/v2/categories'
 const category = 'https://isrsep.dreamhosters.com/wp-json/wp/v2/posts?categories='
+const portfolio = 'https://isrsep.dreamhosters.com/wp-json/wp/v2/portfolio_item'
 
 export async function getPosts(){
     const postsRes = await fetch(API_URL, {
         agent: httpsAgent
     })
     const posts = await postsRes.json()
+    return posts
+}
+
+export async function getPortfolio(){
+    const portfolioPost = await fetch(portfolio, {
+        agent: httpsAgent
+    })
+    const posts = await portfolioPost.json()
     return posts
 }
 

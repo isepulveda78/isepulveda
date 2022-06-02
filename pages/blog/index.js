@@ -11,7 +11,7 @@ export default function blog({posts, categories}){
 
     const jsxPosts = posts.map((post) => {
        const cat = post.cats.map((cat)=> {
-            return cat.name
+            return <div className="badge bg-primary">{cat.name}</div>
         })
         return  <Post key={post.id} post={post} cats={cat}/>
     })
