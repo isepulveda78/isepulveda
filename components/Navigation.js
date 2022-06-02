@@ -31,7 +31,7 @@ export default function Navigation(){
             <button className="navbar-toggler mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <div className="ms-auto">
-                    <Search placeholder={'Search'} data={posts}/>
+                            <Search placeholder={'Search'} data={posts}/>
                 </div>
             </div>
         </div>

@@ -9,6 +9,10 @@ img{
     width: 100% !important;
     height: auto !important;
 }
+.navbar{
+    position: relative !important;
+    z-index: 1 !important;
+}
 .navbar-brand{
     font-family: 'Pacifico', cursive; 
     font-size: 2.2rem !important;
@@ -31,17 +35,15 @@ img{
 .background-header h1{
     font-family: 'Pacifico', cursive; 
 }
-.search-card{
-    z-index: 999 !important;
-    width: 25%;
-    height: 100%;
+.list-group{
+  position: absolute !important;
+  background: none !important;
 }
+.search-card .list-group li{
+    background-color: transparent !important;
+  }
 .search-card li{
     color: #333333;
-}
-.list-group{
-    position: absolute !important;
-    height: 100%;
 }
 footer .logo{
     margin-top: -60px !important;

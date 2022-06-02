@@ -29,33 +29,31 @@ export default function Search({ placeholder, data}){
 
     return (
         <>
-           <div>
+        <div>
             <div>
-        <div className="input-group ">
-          <input type="text"
-            className="form-control" 
-            placeholder={placeholder}
-            onChange={handleFilter}
-            value={wordEntered}
-            />
-            <span className="input-group-text">
-            {
-                filteredData.length === 0 ? <span><FaSearch /></span> : <span id='clearBtn' onClick={clearInput} role="button"><GrClose  className="text-white"/></span> 
-            }
-            </span>
-        </div>
+                <div className="input-group ">
+                <input type="text"
+                    className="form-control" 
+                    placeholder={placeholder}
+                    onChange={handleFilter}
+                    value={wordEntered}
+                    />
+                    <span className="input-group-text">
+                    {
+                        filteredData.length === 0 ? <span><FaSearch /></span> : <span id='clearBtn' onClick={clearInput} role="button"><GrClose  className="text-white"/></span> 
+                    }
+                    </span>
+                </div>
 
           </div>
             {filteredData.length != 0 && (
-                <ul className="search-card list-group h-100 bg-light">
-                    {filteredData.slice(0, 5).map((post) => {
+                <ul className="search-list list-group">
+                    { filteredData.slice(0, 5).map((post) => {
                       return (
-                        <li className="list-group-item" role="button" key={post.id}>
-                            <Link href={`/blog/${post.slug}`} target="_blank" className="text-dark">
-                                <p>{post.title.rendered}</p>
+                           <Link href={`/blog/${post.slug}`} target="_blank" key={post.id}>
+                                 <li className="p-1 text-dark bg-secondary list-group-item" role="button">{post.title.rendered}</li>
                             </Link> 
-                         </li>
-                      )
+                        )
                     })} 
                 </ul>
                 )}

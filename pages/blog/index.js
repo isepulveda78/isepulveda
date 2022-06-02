@@ -31,9 +31,9 @@ export default function blog({posts, categories}){
                             <li className="breadcrumb-item active" aria-current="page"><Link href="/">Back</Link></li>
                         </ol>
                     </nav>
-                        <h2>Notes</h2>
+                        <h2>Blog</h2>
          
-                            { posts.length === 0 && <h3>No notes.</h3> }
+                            { posts.length === 0 && <h3>No Posts</h3> }
 
                             {jsxPosts}
                         </div>
