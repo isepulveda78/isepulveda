@@ -35,6 +35,11 @@ img{
 .background-header h1{
     font-family: 'Pacifico', cursive; 
 }
+.portfolio .card a{
+    color: #333333 !important;
+    font-family: 'Pacifico', cursive; 
+    text-decoration: none;
+}
 .list-group{
   position: absolute !important;
   background: none !important;
