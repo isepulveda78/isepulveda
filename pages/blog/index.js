@@ -13,7 +13,7 @@ const httpsAgent = new https.Agent({
     rejectUnauthorized: false,
 })
 
-export default function blog({posts, categories}){
+export default function Blog({posts, categories}){
 
     const [pageNumber, setPageNumber] = useState(0)
     const postsPerPage = 6
@@ -25,7 +25,7 @@ export default function blog({posts, categories}){
        const cat = post.cats.map((cat)=> {
             return <div className="badge bg-primary" key={cat.id}>{cat.name}</div>
         })
-        return  <Post key={post.id} post={post} cats={cat}/>
+        return  <Post post={post} cats={cat}/>
     })
 
     const jsxCats = categories.map((cat) => {
@@ -99,6 +99,7 @@ export async function getStaticProps(){
             posts,
             categories
         },
+        revalidate: 10, 
     }
 }
 

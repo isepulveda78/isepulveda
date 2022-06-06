@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function Post({post, cats }){
+export default function Post({post, cats}){
     return(
             <div className="card mb-4 bg-white" key={post.id}>
                 <div className="card-body text-dark">

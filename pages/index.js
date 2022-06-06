@@ -12,7 +12,7 @@ export default function blog({posts}){
         const cat = post.categories.map((cat)=> {
              return <div className="badge bg-primary" key={cat.id}>{cat.name}</div>
          })
-         return <Post key={post.id} post={post} cats={cat}/>
+         return <Post post={post} cats={cat}/>
      })
     return (
         <LayoutTwo>
@@ -33,8 +33,6 @@ export default function blog({posts}){
      
     )
 }
-
-
 
 export async function getStaticProps(){
     const posts = await getPortfolio()
