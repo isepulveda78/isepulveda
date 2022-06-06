@@ -20,8 +20,8 @@ export default function blog({posts}){
                <Head />
                <div className="container">
                     <div className="row">  
-                    <h2 className="text-center">Projects</h2>
-                    { posts.length === 0 && <h3>No Projects</h3> }
+                    <h2 className="text-center font-pacifico">Blog</h2>
+                    { posts.length === 0 && <h3>No Posts</h3> }
                         {jsxPosts}
                         <div className="d-grid gap-2">
                             <Link href="/blog"><a className="btn btn-primary btn-lg" type="button">Read My Blog</a></Link>

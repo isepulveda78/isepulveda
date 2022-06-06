@@ -4,10 +4,12 @@ const httpsAgent = new https.Agent({
     rejectUnauthorized: false,
 })
 
-const API_URL = 'https://isrsep.dreamhosters.com/wp-json/wp/v2/posts'
+const API_URL = 'https://isrsep.dreamhosters.com/wp-json/wp/v2/posts?per_page=100'
 const categories = 'https://isrsep.dreamhosters.com/wp-json/wp/v2/categories'
 const category = 'https://isrsep.dreamhosters.com/wp-json/wp/v2/posts?categories='
 const portfolio = 'https://isrsep.dreamhosters.com/wp-json/wp/v2/portfolio_item'
+
+export const PER_PAGE = 6
 
 export async function getPosts(){
     const postsRes = await fetch(API_URL, {

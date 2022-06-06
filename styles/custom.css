@@ -1,13 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Saira+Extra+Condensed:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=PT+Sans+Narrow&family=Pacifico&family=Saira+Extra+Condensed:wght@500;700&display=swap');
 body{
     background: linear-gradient(90deg, rgba(9,132,227,1) 0%, rgba(108,92,231,1) 100%) !important;
 }
 .pacman{
    margin-top: 20%;
 }
+.font-anton{
+    font-family: 'Anton', sans-serif;
+    font-weight: 100;
+}
+.font-pacifico{
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+}
+.category-header{
+    margin-bottom: -8px;
+}
+.page-item .active-pagination a{
+    background: #e83283 !important;
+}
 img{
     width: 100% !important;
     height: auto !important;
+}
+.next a{
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}
+.previous a{
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
 }
 .navbar{
     position: relative !important;
