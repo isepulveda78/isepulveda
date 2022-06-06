@@ -6,13 +6,13 @@ import Link from "next/link"
 import Footer from "@/components/Footer"
 import { getPortfolio } from "utls/wordpress"
 
-export default function blog({posts}){
+export default function Blog({posts}){
     
     const jsxPosts = posts.map((post) => {
         const cat = post.categories.map((cat)=> {
              return <div className="badge bg-primary" key={cat.id}>{cat.name}</div>
          })
-         return <Post post={post} cats={cat}/>
+         return <Post key={post.id} post={post} cats={cat}/>
      })
     return (
         <LayoutTwo>
