@@ -49,8 +49,6 @@ export default function Blog({posts, categories}){
                             <li className="breadcrumb-item active" aria-current="page"><Link href="/">Back</Link></li>
                         </ol>
                     </nav>
-                        <h2 className="font-pacifico">Blog</h2>
-         
                             { posts.length === 0 && <h3>No Posts</h3> }
 
                             {jsxPosts}
@@ -62,10 +60,11 @@ export default function Blog({posts, categories}){
                                 onPageChange={changePage}
                                 containerClassName={"pagination text-dark"}
                                 previousLinkClassName={"page-link bg-white text-dark"}
-                                pageLinkClassName={"page-link text-dark bg-white"}
+                                pageLinkClassName={"page-link text-dark "}
                                 nextLinkClassName={"page-link bg-white text-dark"}
                                 disabledClassName={"page-item disabled"}
-                                activeClassName={"page-item text-primary"}
+                                activeClassName={"page-item active"}
+                                pageClassName={"bg-white"}
                             />
                        </nav>
                         </div>

@@ -16,7 +16,7 @@ export default function blog({posts, categories}){
 
     const jsxPosts = posts.map((post) => {
         const cat = post.cats.map((cat)=> {
-             return cat.name
+             return <div className="badge bg-primary" key={cat.id}>{cat.name}</div>
          })
          return  <Post key={post.id} post={post} cats={cat}/>
      })
@@ -36,25 +36,20 @@ export default function blog({posts, categories}){
                             <li className="breadcrumb-item active" aria-current="page"><Link href="/">Back</Link></li>
                         </ol>
                     </nav>
-                        <h2>Notes</h2>
-         
-                            { posts.length === 0 && <h3>No notes.</h3> }
+               
+                            { posts.length === 0 && <h3>No posts.</h3> }
 
                             {jsxPosts}
                         </div>
                         <div className="col-lg-4">
-                        <div className="card mb-4">
-                            <div className="card-header">Topics</div>
-                            <div className="card-body">
-                                <div className="row">
-                                    <div className="col-sm-6">
-                                        <div className="list-unstyled mb-0">
-                                         { jsxCats }
-                                            </div>
-                                        </div>
+                                <div className="card bg-white text-dark">
+                                    <div className="card-header text-dark border-dark font-anton">
+                                       <h3 className="category-header mb-n5">Categories</h3>
+                                    </div>
+                                    <div className="card-body">
+                                            { jsxCats }
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                </div> 

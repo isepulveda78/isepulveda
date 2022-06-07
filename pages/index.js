@@ -19,8 +19,8 @@ export default function Blog({posts}){
                <Navigation />
                <Head />
                <div className="container">
-                    <div className="row">  
-                    <h2 className="text-center font-pacifico">Blog</h2>
+                    <div className="row" id="portfolio">  
+                    <h2 className="text-center font-pacifico">Portfolio</h2>
                     { posts.length === 0 && <h3>No Posts</h3> }
                         {jsxPosts}
                         <div className="d-grid gap-2">

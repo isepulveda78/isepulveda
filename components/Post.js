@@ -6,7 +6,7 @@ export default function Post({post, cats}){
             <div className="card h-100" key={post.id}>
             <Image src={post.thumbnail} width={1366} height={625} alt={post.name} className="card-img-top img-fluid" />
                 <div className="card-body bg-white text-dark rounded-bottom">
-                    <div className="card-title text-center"><Link href={post.acf.website}>{post.title.rendered}</Link></div>
+                    <div className="card-title text-center"><Link href={post.acf.website}><h3 className="font-pacifico">{post.title.rendered}</h3></Link></div>
                     <hr/>
                     {cats}
                 </div>
