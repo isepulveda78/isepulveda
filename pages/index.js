@@ -23,9 +23,6 @@ export default function Blog({posts}){
                     <h2 className="text-center font-pacifico">Portfolio</h2>
                     { posts.length === 0 && <h3>No Posts</h3> }
                         {jsxPosts}
-                        <div className="d-grid gap-2">
-                            <Link href="/blog"><a className="btn btn-primary btn-lg" type="button">Read My Blog</a></Link>
-                        </div>
                     </div>
                </div>
                <Footer />
