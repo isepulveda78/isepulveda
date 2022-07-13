@@ -5,7 +5,6 @@ export default function Head(){
                 <div className="text-center my-5 text-dark">
                     <h2 className="font-pacifico">Welcome</h2>
                 <Link href={'#portfolio'}><a type="button" className="btn btn-outline-dark btn-lg me-1">Portfolio</a></Link>
-//                 <Link href={'/blog'}><a type="button" className="btn btn-outline-dark btn-lg">Blog</a></Link>
                 </div>
         </header>
     )
