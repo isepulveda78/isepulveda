@@ -28,12 +28,12 @@ export default function Navigation(){
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-padding">
         <div className="container">
             <Link href="/"><div className="navbar-brand" role="button"><Image src={'/img/isepulveda.png'} width={50} height={50} className="logo"/><div className="logo-name ms-2">isepulveda.me</div></div></Link>
-//             <button className="navbar-toggler mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
-//             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-//                 <div className="ms-auto">
-//                             <Search placeholder={'Search'} data={posts}/>
-//                 </div>
-//             </div>
+           <button className="navbar-toggler mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
+           <div className="collapse navbar-collapse" id="navbarSupportedContent">
+               <div className="ms-auto">
+                          <Search placeholder={'Blog Coming Soon'} data={posts}/>
+           </div>
+            </div>
         </div>
     </nav>
     )
